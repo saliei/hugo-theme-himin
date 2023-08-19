@@ -15,7 +15,7 @@ paginate = 5
 
 [languages]
   [languages.en]
-    title = "Hello Friend"
+    title = "Hello Minimal"
     subtitle = "A simple theme for Hugo"
     keywords = ""
     copyright = ""
