@@ -1,5 +1,5 @@
-# Minimalist
-A minimalist, clean, readable Hugo theme suited for a personal website.
+# HiMin
+A minimal, clean, and readable Hugo theme suited for a personal website.
 
 The theme is inspired by: 
 - [hello-friend](https://github.com/panr/hugo-theme-hello-friend) 
