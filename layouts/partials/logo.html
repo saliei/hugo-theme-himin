@@ -6,7 +6,6 @@
   {{ if $.Site.Params.Logo.path }}
     <img src="{{ $.Site.Params.Logo.path }}" alt="{{ $.Site.Params.Logo.alt }}" />
     {{ else }}
-    <span class="logo__mark">{{ partial "greater-icon.html" . }}</span>
     <span class="logo__text"
       >{{ with $.Site.Params.Logo.logoText }}{{ . }}{{ else }}hello friend{{ end }}</span
     >
