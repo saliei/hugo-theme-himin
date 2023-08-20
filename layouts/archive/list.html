@@ -8,12 +8,8 @@
       {{ if ne .Key "0001" }}
         <div class="archive__group-year">
           <h2 class="archive__group-year-header">{{ replace .Key "0001" "" }}</h2>
-          {{ range .Pages.GroupByDate "January" }}
-            <div class="archive__group-month">
-              <h3 class="archive__group-month-header">{{ .Key }}</h3>
               <div class="archive__group-posts">
                 {{ range where .Pages "Type" $contentTypeName }}
-                  {{ if eq .Kind "page" }}
                     <article class="archive__post">
                       <h3 class="archive__post-title">
                         <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
@@ -37,11 +33,8 @@
                         {{ end }}
                       </div>
                     </article>
-                  {{ end }}
                 {{ end }}
               </div>
-            </div>
-          {{ end }}
         </div>
       {{ end }}
     {{ end }}
