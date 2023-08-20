@@ -22,6 +22,7 @@
 
     &-year {
       margin-top: 40px;
+      display: flex;
 
       @media ($phone) {
         margin-top: 20px;
@@ -55,6 +56,8 @@
 
   &__post {
     padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
 
     &:not(:last-of-type) {
       border-bottom: 1px solid var(--border-color);
