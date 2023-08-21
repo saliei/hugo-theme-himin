@@ -28,12 +28,9 @@
         margin-top: 20px;
       }
 
-      &:not(:last-of-type) {
-        border-bottom: 1px solid var(--border-color);
-      }
-
       &-header {
-        margin: 10px 0;
+        margin: 15px 0;
+        margin-right: 20px;
       }
     }
 
@@ -55,7 +52,7 @@
   }
 
   &__post {
-    padding: 20px 0;
+    padding: 10px 0;
     display: flex;
     justify-content: space-between;
 
