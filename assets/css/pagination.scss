@@ -5,7 +5,7 @@
     display: flex;
     text-align: center;
     position: relative;
-    margin: 100px 0 20px;
+    margin: 100px 0 0;
 
     &-h {
       text-align: center;
@@ -33,7 +33,7 @@
   &__buttons {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 
     a {
       text-decoration: none;

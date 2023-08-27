@@ -3,7 +3,7 @@
   max-width: 800px;
   text-align: left;
   padding: 20px;
-  margin: 20px auto;
+  margin: 20px auto 10px auto;
 
   @media ($tablet) {
     max-width: 660px;
@@ -15,19 +15,22 @@
 
   &-meta {
     font-size: 1rem;
-    margin-bottom: 10px;
 
     @media ($phone) {
       font-size: .85rem;
     }
   }
 
+  &-date-author {
+      margin-top: 5px;
+  }
+
   &-title {
-    font-size: 2.625rem;
-    margin: 0 0 20px;
+    font-size: 2rem;
+    margin: 0 0 0px;
 
     @media ($phone) {
-      font-size: 2rem;
+      font-size: 1.8rem;
     }
 
     a {
@@ -37,7 +40,7 @@
 
   &-tags {
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-size: 1rem;
     opacity: .5;
 
@@ -47,7 +50,7 @@
   }
 
   &-content {
-    margin-top: 30px;
+    margin-top: 8px;
   }
 
   &-cover {
