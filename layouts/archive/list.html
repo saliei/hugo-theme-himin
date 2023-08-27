@@ -19,13 +19,6 @@
                         <time class="archive__post-date">
                           {{ .Date.Format ($.Site.Params.DateFormatList | default "2006-01-02") }}
                         </time>
-                        {{ with .Params.Author }}
-                          <span class="archive__post-author"
-                            >—
-                            {{ $.Site.Params.WrittenBy | default "Written by" }}
-                            {{ . }}
-                          </span>
-                        {{ end }}
                         {{ if $.Site.Params.ShowReadingTime }}
                           <span class="archive__post-read-time"
                             >— {{ .ReadingTime }}

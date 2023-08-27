@@ -4,8 +4,20 @@
       <div class="copyright copyright--user">{{ $.Site.Copyright | safeHTML }}</div>
       {{ else }}
       {{ partial "logo.html" . }}
+      <div class="footer__socials">
+          <span class="footer__social_icon">
+              <a href="https://github.com/saliei" target="_blank">
+                  {{ partial "social-icon-github.html" . }}
+              </a>
+          </span>
+          <span class="footer__social_icon">
+              <a href="https://twitter.com/SaeidAliei" target="_blank">
+                  {{ partial "social-icon-twitter.html" . }}
+              </a>
+          </span>
+      </div>
       <div class="copyright">
-        <span>© {{ now.Year }} Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a></span>
+        <span>© {{ now.Year }} </span>
       </div>
     {{ end }}
   </div>
