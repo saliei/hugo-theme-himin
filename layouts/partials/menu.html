@@ -2,8 +2,7 @@
   <ul class="menu__inner menu__inner--desktop">
     {{ if or $.Site.Params.showMenuItems (eq $.Site.Params.showMenuItems 0) }}
     {{ if $.Site.Params.manuallyOrderedMenuItems }}
-      <li><a href="/archive">Archive</a></li>
-      <li><a href="/showcase">Showcase</a></li>
+      <li><a href="/articles">Articles</a></li>
       <li><a href="/about">About</a></li>
     {{ else }}
       {{ range first $.Site.Params.showMenuItems $.Site.Menus.main }}
