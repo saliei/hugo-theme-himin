@@ -8,7 +8,7 @@
       {{ if ne .Key "0001" }}
       {{ if ne .Pages "posts" }}
         <div class="archive__group-year">
-          <h2 class="archive__group-year-header">{{ replace .Key "0001" "" }}</h2>
+          <h3 class="archive__group-year-header">{{ replace .Key "0001" "" }}</h3>
               <div class="archive__group-posts">
                 {{ range where .Pages "Type" $contentTypeName }}
                     <article class="archive__post">
