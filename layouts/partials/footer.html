@@ -1,14 +1,19 @@
 <footer class="footer">
   <div class="footer__inner">
-    {{ if $.Site.Copyright }}
-      <div class="copyright copyright--user">{{ $.Site.Copyright | safeHTML }}</div>
-      {{ else }}
       {{ partial "logo.html" . }}
-      <div class="copyright">
-        <span>© {{ now.Year }} Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a></span>
-        <span><a href="https://github.com/panr/hugo-theme-hello-friend" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      <div class="socials">
+        <ul class="menu__inner">
+            <li><a href="https://github.com/saliei" target="_blank">GitLab</a></li>
+            <li><a href="https://github.com/saliei" target="_blank">GitHub</a></li>
+            <li><a href="https://x.com/SaeidAliei" target="_blank">Twitter</a></li>
+            <li><a href="https://linkedin.com/in/saeidaliei/" target="_blank">Linkedin</a></li>
+            <li>
+            </li>
+        </ul>
       </div>
-    {{ end }}
+      <div class="copyright">
+        <span>© {{ now.Year }} </span>
+      </div>
   </div>
 </footer>
 
