@@ -22,15 +22,17 @@
 
     &-year {
       margin-top: 40px;
-      display: flex;
 
       @media ($phone) {
         margin-top: 20px;
       }
 
+      &:not(:last-of-type) {
+        border-bottom: 1px solid var(--border-color);
+      }
+
       &-header {
-        margin: 15px 0;
-        margin-right: 20px;
+        margin: 10px 0;
       }
     }
 
@@ -52,9 +54,7 @@
   }
 
   &__post {
-    padding: 10px 0;
-    display: flex;
-    justify-content: space-between;
+    padding: 20px 0;
 
     &:not(:last-of-type) {
       border-bottom: 1px solid var(--border-color);
@@ -62,7 +62,6 @@
 
     &-title {
       margin: 5px 0;
-      max-width: 90%;
 
       a {
         display: block;

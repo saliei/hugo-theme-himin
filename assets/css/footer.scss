@@ -1,5 +1,5 @@
 .footer {
-  padding: 5px;
+  padding: 40px 20px;
   flex-grow: 0;
   color: var(--color-secondary);
 
@@ -14,21 +14,6 @@
     @media ($tablet) {
       flex-direction: column;
     }
-  }
-
-  &__socials {
-      display: flex;
-  }
-
-  &__social_icon {
-      margin: 0 8px;
-
-      a {
-          text-decoration: none;
-      }
-      a:hover {
-          color: var(--color);
-      }
   }
 
   a {
@@ -63,9 +48,4 @@
       margin-top: 10px;
     }
   }
-}
-
-.social-icon {
-    display: flex;
-    fill: currentColor;
 }

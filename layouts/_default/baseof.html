@@ -3,9 +3,9 @@
   <head>
     {{ block "title" . }}
       <title>
-        {{ if .IsHome }}{{ $.Site.Title }}{{ with $.Site.Params.Subtitle }}
-        {{ . }}{{ end }}{{ else }}{{ .Title }} -
-        {{ $.Site.Title }}{{ with $.Site.Params.Subtitle }} {{ . }}{{ end }}{{ end }}
+        {{ if .IsHome }}{{ $.Site.Title }}{{ with $.Site.Params.Subtitle }} —
+        {{ . }}{{ end }}{{ else }}{{ .Title }} ::
+        {{ $.Site.Title }}{{ with $.Site.Params.Subtitle }} — {{ . }}{{ end }}{{ end }}
       </title>
     {{ end }}
     {{ partial "head.html" . }}
@@ -23,8 +23,5 @@
       {{ end }}
     </div>
 
-    {{ if $.Site.GoogleAnalytics }}
-      {{ template "_internal/google_analytics.html" . }}
-    {{ end }}
   </body>
 </html>

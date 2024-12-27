@@ -6,11 +6,14 @@
     <h1>{{ .Title }}</h1>
     {{ range .Site.RegularPages.GroupByPublishDate "2006" }}
       {{ if ne .Key "0001" }}
-      {{ if ne .Pages "posts" }}
         <div class="archive__group-year">
-          <h3 class="archive__group-year-header">{{ replace .Key "0001" "" }}</h3>
+          <h2 class="archive__group-year-header">{{ replace .Key "0001" "" }}</h2>
+          {{ range .Pages.GroupByDate "January" }}
+            <div class="archive__group-month">
+              <h3 class="archive__group-month-header">{{ .Key }}</h3>
               <div class="archive__group-posts">
                 {{ range where .Pages "Type" $contentTypeName }}
+                  {{ if eq .Kind "page" }}
                     <article class="archive__post">
                       <h3 class="archive__post-title">
                         <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
@@ -19,6 +22,13 @@
                         <time class="archive__post-date">
                           {{ .Date.Format ($.Site.Params.DateFormatList | default "2006-01-02") }}
                         </time>
+                        {{ with .Params.Author }}
+                          <span class="archive__post-author"
+                            >—
+                            {{ $.Site.Params.WrittenBy | default "Written by" }}
+                            {{ . }}
+                          </span>
+                        {{ end }}
                         {{ if $.Site.Params.ShowReadingTime }}
                           <span class="archive__post-read-time"
                             >— {{ .ReadingTime }}
@@ -27,10 +37,12 @@
                         {{ end }}
                       </div>
                     </article>
+                  {{ end }}
                 {{ end }}
               </div>
+            </div>
+          {{ end }}
         </div>
-      {{ end }}
       {{ end }}
     {{ end }}
   </div>

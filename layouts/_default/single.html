@@ -4,15 +4,6 @@
 
   <article class="post">
     <h1 class="post-title">{{ .Title | markdownify }}</h1>
-    <span style="display: flex">
-    {{ if .Params.tags }}
-      <span class="post-tags">
-        {{ range .Params.tags }}
-          <a href="{{ (urlize (printf "tags/%s" . )) | absLangURL }}/">#{{ . }}</a>&nbsp;
-        {{ end }}
-      </span>
-    {{ end }}
-
     <div class="post-meta">
       {{ if .Date | default nil }}
         <time class="post-date">
@@ -25,11 +16,12 @@
           {{ end }}
         {{ end }}
       {{ end }}
-      <break>
+
       {{ with .Params.Author }}
         <span class="post-author"
           >— {{ $.Site.Params.WrittenBy | default "Written by" }} {{ . }}</span
         >{{ end }}
+
 
       {{ if $.Site.Params.ShowReadingTime }}
         <span class="post-read-time"
@@ -38,11 +30,17 @@
       {{ end }}
     </div>
 
+    {{ if .Params.tags }}
+      <span class="post-tags">
+        {{ range .Params.tags }}
+          <a href="{{ (urlize (printf "tags/%s" . )) | absLangURL }}/">#{{ . }}</a>&nbsp;
+        {{ end }}
+      </span>
+    {{ end }}
+
     {{ if .Params.Cover }}
       {{ partial "postcover.html" . }}
     {{ end }}
-    
-    </span>
 
     <div class="post-content">
       {{ if or .Params.Toc $.Site.Params.Toc }}
