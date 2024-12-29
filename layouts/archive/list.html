@@ -20,11 +20,6 @@
                       </h3>
                       <div class="archive__post-meta">
                         {{ with .Params.Author }}
-                          <span class="archive__post-author"
-                            >—
-                            {{ $.Site.Params.WrittenBy | default "Written by" }}
-                            {{ . }}
-                          </span>
                         {{ end }}
                         {{ if $.Site.Params.ShowReadingTime }}
                           <span class="archive__post-read-time"
