@@ -1,6 +1,7 @@
 .footer {
   padding: 12px 20px;
   flex-grow: 0;
+  flex-shrink: 0;
   color: var(--color-secondary);
 
   &__inner {
