@@ -8,7 +8,10 @@
         {{ . }}{{ end }}{{ end }}
       </title>
     {{ end }}
-    {{ partial "head.html" . }}
+	{{ partial "head.html" . }}
+	{{ if .Param "math" }}
+	  {{ partialCached "math.html" . }}
+	{{ end }}
   </head>
   <body {{ with $.Site.Params.defaultTheme -}} class="{{ printf "%s-theme" . }}" {{- end }}>
     <div class="container">
